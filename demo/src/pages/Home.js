@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Home({ name }) {
+export default function Home() {
   return (
     <>
-      <h1>{name} is mounted!</h1>
+      <h1>Demo is mounted!</h1>
     </>
   );
 }

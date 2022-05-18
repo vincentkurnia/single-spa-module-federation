@@ -46,16 +46,16 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/index.html"
+            template: "./public/index.html"
         }),
         new ModuleFederationPlugin({
-            name: "container",
-            // library: { type: "var", name: "container" },
+            name: "another",
+            library: { type: "var", name: "another" },
             filename: "remoteEntry.js",
-            remotes: {
-
+            remotes: {},
+            exposes: {
+                "./Another": "./src/another.js",
             },
-            exposes: {},
             shared: packageJson.dependencies
         })
     ]
