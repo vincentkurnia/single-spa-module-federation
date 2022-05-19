@@ -40,7 +40,7 @@ module.exports = {
             filename: "remoteEntry.js",
             remotes: {},
             exposes: {
-                "./Demo": "./src/demo.js",
+                "./Demo": "./src/single-spa/demo.js",
             },
             shared: packageJson.dependencies
         })

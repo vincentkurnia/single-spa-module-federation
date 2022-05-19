@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import singleSpaReact from "single-spa-react";
-import Router from "./router/Router";
+import Router from "../router/Router";
 
 const lifecycles = singleSpaReact({
     React,

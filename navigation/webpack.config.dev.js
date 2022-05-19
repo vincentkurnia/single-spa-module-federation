@@ -3,19 +3,23 @@ const commonConfig = require("./webpack.config.common");
 
 const port = 3001;
 
-const devConfig = {
-    mode: "development",
+module.exports = (env) => {
+    const devConfig = {
+        entry: env.standalone ? "./src/standalone.js" : "./src/index.js",
 
-    devtool: "source-map",
+        mode: "development",
 
-    output: {
-        publicPath: `http://localhost:${port}/`
-    },
+        devtool: "source-map",
 
-    devServer: {
-        port: port,
-        historyApiFallback: true
+        output: {
+            publicPath: `http://localhost:${port}/`
+        },
+
+        devServer: {
+            port: port,
+            historyApiFallback: true
+        }
     }
-}
 
-module.exports = merge(commonConfig, devConfig);
+    return merge(commonConfig, devConfig);
+}

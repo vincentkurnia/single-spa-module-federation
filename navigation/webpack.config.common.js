@@ -40,8 +40,8 @@ module.exports = {
             filename: "remoteEntry.js",
             remotes: {},
             exposes: {
-                "./Home": "./src/home.js",
-                "./Navbar": "./src/navbar.js"
+                "./Home": "./src/single-spa/home.js",
+                "./Navbar": "./src/single-spa/navbar.js"
             },
             shared: packageJson.dependencies
         })
