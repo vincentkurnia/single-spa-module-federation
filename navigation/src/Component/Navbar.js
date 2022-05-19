@@ -20,6 +20,9 @@ export default function Root() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
+          <Typography variant="h6" component={Link} href="/" sx={styles.link}>
+            Home
+          </Typography>
           <Typography variant="h6" component={Link} href="/demo" sx={styles.link}>
             Demo
           </Typography>

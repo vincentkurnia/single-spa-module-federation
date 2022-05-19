@@ -1,21 +1,8 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-
-const port = 3002;
 const packageJson = require("./package.json");
 
 module.exports = {
-    mode: "development",
-
-    output: {
-        publicPath: `http://localhost:${port}/`
-    },
-
-    devServer: {
-        port: port,
-        historyApiFallback: true
-    },
-
     module: {
         rules: [
             {
@@ -49,12 +36,11 @@ module.exports = {
             template: "./public/index.html"
         }),
         new ModuleFederationPlugin({
-            name: "demo",
-            library: { type: "var", name: "demo" },
+            name: "another",
             filename: "remoteEntry.js",
             remotes: {},
             exposes: {
-                "./Demo": "./src/demo.js",
+                "./Another": "./src/another.js",
             },
             shared: packageJson.dependencies
         })

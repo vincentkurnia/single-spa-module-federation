@@ -6,7 +6,6 @@ import Router from "./router/Router";
 const lifecycles = singleSpaReact({
     React,
     ReactDOM,
-    // rootComponent: Root,
     rootComponent: Router,
     errorBoundary(err, info, props) {
         // Customize the root error boundary for your microfrontend here.
