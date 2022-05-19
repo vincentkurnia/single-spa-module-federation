@@ -15,7 +15,7 @@ const styles = {
   }
 }
 
-export default function Root() {
+export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">

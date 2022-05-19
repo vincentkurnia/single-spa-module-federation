@@ -7,6 +7,12 @@ registerApplication(
 );
 
 registerApplication(
+    "home",
+    () => import("navigation/Home"),
+    (location) => location.pathname.startsWith("/")
+);
+
+registerApplication(
     "demo",
     () => import("demo/Demo"),
     (location) => location.pathname.startsWith("/demo")
