@@ -46,3 +46,35 @@ export default function Navbar() {
     </Box>
   );
 }
+
+/*export default function Navbar() {
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component={Link} to="/" sx={styles.link}>
+            Home
+          </Typography>
+          <Typography variant="h6" component={Link} to="demo" sx={styles.link}>
+            Demo
+          </Typography>
+          <Typography variant="h6" component={Link} to="demo/1" sx={styles.link}>
+            Demo One
+          </Typography>
+          <Typography variant="h6" component={Link} to="demo/2" sx={styles.link}>
+            Demo Two
+          </Typography>
+          <Typography variant="h6" component={Link} to="another" sx={styles.link}>
+            Another
+          </Typography>
+          <Typography variant="h6" component={Link} to="another/1" sx={styles.link}>
+            Another One
+          </Typography>
+          <Typography variant="h6" component={Link} to="another/2" sx={styles.link}>
+            Another Two
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
+}*/

@@ -24,4 +24,6 @@ registerApplication(
     (location) => location.pathname.startsWith("/another")
 );
 
-start();
+start({
+    urlRerouteOnly: true
+});
