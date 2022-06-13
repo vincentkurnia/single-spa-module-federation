@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "start": "concurrently --kill-others \"cd another && npm start\" \"cd demo && npm start\" \"cd navigation && npm start\" \"cd container && npm start\""
+    },
+    "devDependencies": {
+        "concurrently": "^7.2.1"
+    }
+}
