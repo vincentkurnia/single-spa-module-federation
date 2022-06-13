@@ -1,6 +1,7 @@
 {
     "scripts": {
-        "start": "concurrently --kill-others \"cd another && npm start\" \"cd demo && npm start\" \"cd navigation && npm start\" \"cd container && npm start\""
+        "start": "concurrently --kill-others \"cd another && npm start\" \"cd demo && npm start\" \"cd navigation && npm start\" \"cd container && npm start\"",
+        "install:all": "concurrently --kill-others \"cd another && npm install\" \"cd demo && npm install\" \"cd navigation && npm install\" \"cd container && npm install\""
     },
     "devDependencies": {
         "concurrently": "^7.2.1"
