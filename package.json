@@ -1,7 +1,7 @@
 {
     "scripts": {
-        "start": "concurrently --kill-others \"cd another && npm start\" \"cd demo && npm start\" \"cd navigation && npm start\" \"cd container && npm start\"",
-        "install:all": "concurrently --kill-others \"cd another && npm install\" \"cd demo && npm install\" \"cd navigation && npm install\" \"cd container && npm install\""
+        "start": "concurrently -k \"yarn --cwd ./another start\" \"yarn --cwd demo start\" \"yarn --cwd navigation start\" \"yarn --cwd container start\"",
+		"install-all": "yarn --cwd ./another install && yarn --cwd ./demo install && yarn --cwd ./navigation install && yarn --cwd ./container install"
     },
     "devDependencies": {
         "concurrently": "^7.2.1"
